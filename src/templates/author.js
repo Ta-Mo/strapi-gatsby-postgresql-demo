@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import ReactMarkdown from "react-markdown"
+import "../styles/global.css"
 
 const UserTemplate = ({ data }) => (
   <Layout>
@@ -19,6 +20,7 @@ const UserTemplate = ({ data }) => (
                 ? uri
                 : `${process.env.IMAGE_BASE_URL}${uri}`
             }
+            className="indexArticle"
           />
           <Link to={`/Article_${article.id}`}>Read More</Link>
         </li>
