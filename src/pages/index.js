@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
 import ReactMarkdown from "react-markdown"
+import "../styles/global.css"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -24,6 +25,7 @@ const IndexPage = ({ data }) => (
                 ? uri
                 : `${process.env.IMAGE_BASE_URL}${uri}`
             }
+            className="indexArticle"
           />
           <Link to={`/${document.node.id}`}>Read More</Link>
         </li>
